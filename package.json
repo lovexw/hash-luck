@@ -1,0 +1,25 @@
+{
+  "name": "hash-luck-daily-btc-lottery",
+  "version": "1.0.0",
+  "description": "Daily Bitcoin block hash lucky number lottery with Cloudflare Worker frontend and GitHub Actions automation",
+  "main": "scripts/fetch_block.js",
+  "scripts": {
+    "fetch": "node scripts/fetch_block.js",
+    "dev": "wrangler pages dev worker",
+    "deploy": "wrangler pages deploy worker"
+  },
+  "keywords": [
+    "bitcoin",
+    "lottery",
+    "cloudflare-worker",
+    "github-actions"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
