@@ -1,0 +1,7 @@
+name = "hash-luck-daily-btc-lottery"
+compatibility_date = "2024-01-01"
+
+pages_build_output_dir = "worker"
+
+[env.production]
+name = "hash-luck-daily-btc-lottery"
