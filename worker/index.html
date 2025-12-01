@@ -42,6 +42,91 @@
       opacity: 0.9;
     }
 
+    .site-link {
+      margin-top: 20px;
+    }
+
+    .site-link a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+
+    .site-link a:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .rules-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      animation: fadeInUp 1s ease 0.1s both;
+    }
+
+    .rules-card h2 {
+      font-size: 2em;
+      color: #667eea;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .rules-content {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .rules-content h3 {
+      color: #764ba2;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .rules-content ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    .rules-content li {
+      margin: 8px 0;
+    }
+
+    .rules-content strong {
+      color: #667eea;
+    }
+
+    .warning-card {
+      background: #fff3cd;
+      border-left: 5px solid #ffc107;
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+
+    .warning-card h2 {
+      color: #856404;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .warning-card p {
+      color: #856404;
+      line-height: 1.8;
+      margin: 10px 0;
+    }
+
     .main-card {
       background: white;
       border-radius: 20px;
@@ -300,7 +385,39 @@
     <header>
       <h1>🎲 Hash-Luck</h1>
       <p>每日比特币区块哈希值幸运号码抽奖</p>
+      <div class="site-link">
+        <a href="https://www.btchao.com" target="_blank" rel="noopener noreferrer">🏠 主站：比特币数据平台</a>
+      </div>
     </header>
+
+    <div class="rules-card">
+      <h2>📖 游戏规则</h2>
+      <div class="rules-content">
+        <h3>🎯 如何使用</h3>
+        <ul>
+          <li>每天北京时间 <strong>12:00</strong> 后，系统会自动选取当天中午后的第一个比特币区块</li>
+          <li>从区块哈希值中提取出 <strong>3位数</strong> 和 <strong>6位数</strong> 的幸运号码</li>
+          <li>所有数据每日 <strong>12:15</strong> 自动更新，确保公平公正</li>
+          <li>您可以查看今日号码和历史记录，用于参考或娱乐</li>
+        </ul>
+
+        <h3>🔢 号码生成规则</h3>
+        <ul>
+          <li>从比特币区块哈希值中提取所有数字字符（0-9）</li>
+          <li>将提取的数字<strong>倒序排列</strong></li>
+          <li>取前 <strong>3 位</strong>作为幸运 3 位数</li>
+          <li>取前 <strong>6 位</strong>作为幸运 6 位数</li>
+        </ul>
+
+        <h3>🌐 数据来源</h3>
+        <ul>
+          <li><strong>区块链数据：</strong>来自 Blockstream.info 官方 API</li>
+          <li><strong>公开透明：</strong>所有区块信息均可在比特币区块链浏览器上验证</li>
+          <li><strong>自动化更新：</strong>通过 GitHub Actions 自动抓取和更新数据</li>
+          <li><strong>开源项目：</strong>所有代码和数据完全开源，欢迎审查和贡献</li>
+        </ul>
+      </div>
+    </div>
 
     <div class="main-card">
       <div class="today-section">
@@ -322,6 +439,16 @@
           <p>正在加载历史记录...</p>
         </div>
       </div>
+    </div>
+
+    <div class="warning-card">
+      <h2>⚠️ 风险提示</h2>
+      <p><strong>本项目仅供学习、研究和娱乐参考使用。</strong></p>
+      <p>1. 本系统基于比特币区块链数据生成随机号码，<strong>不构成任何投资建议</strong>。</p>
+      <p>2. 请勿将本系统用于任何形式的赌博、非法彩票或其他违法活动。</p>
+      <p>3. 区块链数据具有不可预测性，但<strong>不保证绝对的随机性</strong>，请理性对待。</p>
+      <p>4. 使用本系统产生的任何后果由使用者自行承担，开发者不承担任何法律责任。</p>
+      <p>5. 请遵守所在地区的法律法规，理性娱乐，切勿沉迷。</p>
     </div>
 
     <footer>
