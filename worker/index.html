@@ -395,7 +395,7 @@
       <div class="rules-content">
         <h3>🎯 如何使用</h3>
          <ul>
-           <li>每天北京时间 <strong>12:00 整</strong>，系统会自动选取此后的第一个比特币区块</li>
+           <li>每天北京时间 <strong>12:00 整</strong>，系统会自动选取此时之前的最后一个比特币区块</li>
            <li>从该区块的哈希值中提取出 <strong>3位数</strong> 和 <strong>6位数</strong> 的幸运号码</li>
            <li>所有数据每日 <strong>12:00</strong> 自动更新，确保公平公正</li>
            <li>您可以查看今日号码和历史记录，用于参考或娱乐</li>
@@ -452,7 +452,7 @@
     </div>
 
     <footer>
-      <p>基于比特币区块链的公平抽奖系统 | 每日北京时间 12:00 后第一个区块</p>
+      <p>基于比特币区块链的公平抽奖系统 | 每日北京时间 12:00 前最后一个区块</p>
       <p>数据来源: Blockstream.info | 由 GitHub Actions 自动更新</p>
     </footer>
   </div>
@@ -494,7 +494,7 @@
         const response = await fetch(`${GITHUB_RAW_BASE}/${dateStr}.json`);
 
         if (!response.ok) {
-          throw new Error('今日数据尚未生成，请等待 12:00 后更新');
+          throw new Error('今日数据尚未生成，请等待 12:00 更新');
         }
 
         const data = await response.json();
