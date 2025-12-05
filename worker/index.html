@@ -394,12 +394,12 @@
       <h2>📖 游戏规则</h2>
       <div class="rules-content">
         <h3>🎯 如何使用</h3>
-        <ul>
-          <li>每天北京时间 <strong>12:00</strong> 后，系统会自动选取当天中午后的第一个比特币区块</li>
-          <li>从区块哈希值中提取出 <strong>3位数</strong> 和 <strong>6位数</strong> 的幸运号码</li>
-          <li>所有数据每日 <strong>12:15</strong> 自动更新，确保公平公正</li>
-          <li>您可以查看今日号码和历史记录，用于参考或娱乐</li>
-        </ul>
+         <ul>
+           <li>每天北京时间 <strong>12:00 整</strong>，系统会自动选取此后的第一个比特币区块</li>
+           <li>从该区块的哈希值中提取出 <strong>3位数</strong> 和 <strong>6位数</strong> 的幸运号码</li>
+           <li>所有数据每日 <strong>12:00</strong> 自动更新，确保公平公正</li>
+           <li>您可以查看今日号码和历史记录，用于参考或娱乐</li>
+         </ul>
 
         <h3>🔢 号码生成规则</h3>
         <ul>
@@ -492,9 +492,9 @@
         const dateStr = beijingTime.toISOString().split('T')[0];
 
         const response = await fetch(`${GITHUB_RAW_BASE}/${dateStr}.json`);
-        
+
         if (!response.ok) {
-          throw new Error('今日数据尚未生成，请等待 12:15 后更新');
+          throw new Error('今日数据尚未生成，请等待 12:00 后更新');
         }
 
         const data = await response.json();
