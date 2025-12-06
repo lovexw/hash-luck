@@ -13,10 +13,10 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: #FAFAFA;
       min-height: 100vh;
       padding: 20px;
-      color: #333;
+      color: #222222;
     }
 
     .container {
@@ -26,303 +26,332 @@
 
     header {
       text-align: center;
-      padding: 40px 0;
-      color: white;
+      padding: 60px 0;
+      color: #1A1A1A;
     }
 
     header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      font-size: 3.5em;
+      margin-bottom: 16px;
+      font-weight: 700;
       animation: fadeInDown 1s ease;
     }
 
     header p {
-      font-size: 1.2em;
-      opacity: 0.9;
+      font-size: 1.3em;
+      opacity: 0.8;
+      font-weight: 400;
     }
 
     .site-link {
-      margin-top: 20px;
+      margin-top: 24px;
     }
 
     .site-link a {
-      color: white;
+      color: #1A1A1A;
       text-decoration: none;
       font-size: 1.1em;
-      padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 8px;
-      transition: background 0.3s ease;
+      padding: 12px 24px;
+      background: #FF9900;
+      border-radius: 16px;
+      transition: all 0.3s ease;
       display: inline-block;
+      font-weight: 500;
+      box-shadow: 0 4px 15px rgba(255, 153, 0, 0.15);
     }
 
     .site-link a:hover {
-      background: rgba(255, 255, 255, 0.3);
+      background: #E68500;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 153, 0, 0.2);
     }
 
     .rules-card {
       background: white;
-      border-radius: 20px;
-      padding: 40px;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      border-radius: 16px;
+      padding: 48px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
       animation: fadeInUp 1s ease 0.1s both;
+      border: 1px solid #E0E0E0;
     }
 
     .rules-card h2 {
-      font-size: 2em;
-      color: #667eea;
-      margin-bottom: 20px;
+      font-size: 2.2em;
+      color: #1A1A1A;
+      margin-bottom: 32px;
       text-align: center;
+      font-weight: 700;
     }
 
     .rules-content {
-      color: #555;
+      color: #222222;
       line-height: 1.8;
+      font-size: 1.05em;
     }
 
     .rules-content h3 {
-      color: #764ba2;
-      margin-top: 20px;
-      margin-bottom: 10px;
-      font-size: 1.3em;
+      color: #1A1A1A;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      font-size: 1.4em;
+      font-weight: 600;
     }
 
     .rules-content ul {
-      margin-left: 20px;
-      margin-top: 10px;
+      margin-left: 24px;
+      margin-top: 12px;
     }
 
     .rules-content li {
-      margin: 8px 0;
+      margin: 12px 0;
+      line-height: 1.7;
     }
 
     .rules-content strong {
-      color: #667eea;
+      color: #FF9900;
+      font-weight: 600;
     }
 
     .warning-card {
-      background: #fff3cd;
-      border-left: 5px solid #ffc107;
-      border-radius: 10px;
-      padding: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      background: #FFF8F0;
+      border: 1px solid #FFE0B2;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 15px rgba(255, 153, 0, 0.1);
       animation: fadeInUp 1s ease 0.3s both;
     }
 
     .warning-card h2 {
-      color: #856404;
-      margin-bottom: 15px;
-      font-size: 1.5em;
+      color: #E68500;
+      margin-bottom: 20px;
+      font-size: 1.6em;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+      font-weight: 600;
     }
 
     .warning-card p {
-      color: #856404;
+      color: #666666;
       line-height: 1.8;
-      margin: 10px 0;
+      margin: 12px 0;
     }
 
     .main-card {
       background: white;
-      border-radius: 20px;
-      padding: 40px;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      border-radius: 16px;
+      padding: 48px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
       animation: fadeInUp 1s ease;
+      border: 1px solid #E0E0E0;
     }
 
     .today-section {
       text-align: center;
-      padding: 20px 0;
+      padding: 32px 0;
     }
 
     .today-section h2 {
-      font-size: 2em;
-      color: #667eea;
-      margin-bottom: 30px;
+      font-size: 2.4em;
+      color: #1A1A1A;
+      margin-bottom: 48px;
+      font-weight: 700;
     }
 
     .lucky-numbers {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 48px;
       flex-wrap: wrap;
-      margin: 30px 0;
+      margin: 40px 0;
     }
 
     .lucky-box {
-      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      padding: 30px 40px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #1A1A1A;
+      padding: 40px 48px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(26, 26, 26, 0.12);
+      transition: all 0.3s ease;
       cursor: pointer;
+      border: 1px solid #E0E0E0;
     }
 
     .lucky-box:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 8px 30px rgba(245, 87, 108, 0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(26, 26, 26, 0.15);
     }
 
-    .lucky-box.gold {
-      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-      box-shadow: 0 5px 20px rgba(253, 160, 133, 0.4);
+    .lucky-box.accent {
+      background: #FF9900;
+      box-shadow: 0 8px 25px rgba(255, 153, 0, 0.15);
     }
 
-    .lucky-box.gold:hover {
-      box-shadow: 0 8px 30px rgba(253, 160, 133, 0.6);
+    .lucky-box.accent:hover {
+      box-shadow: 0 12px 35px rgba(255, 153, 0, 0.2);
     }
 
     .lucky-label {
-      font-size: 1em;
-      color: white;
+      font-size: 1.1em;
+      color: #FAFAFA;
       opacity: 0.9;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
+      font-weight: 500;
     }
 
     .lucky-value {
-      font-size: 3.5em;
-      font-weight: bold;
-      color: white;
+      font-size: 3.8em;
+      font-weight: 700;
+      color: #FAFAFA;
       font-family: 'Courier New', monospace;
-      letter-spacing: 5px;
+      letter-spacing: 6px;
       animation: pulse 2s ease-in-out infinite;
     }
 
     .block-info {
-      margin-top: 30px;
-      padding: 20px;
-      background: #f8f9fa;
-      border-radius: 10px;
+      margin-top: 40px;
+      padding: 32px;
+      background: #FAFAFA;
+      border-radius: 16px;
       text-align: left;
+      border: 1px solid #E0E0E0;
     }
 
     .block-info h3 {
-      color: #667eea;
-      margin-bottom: 15px;
+      color: #1A1A1A;
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 1.3em;
     }
 
     .block-info p {
-      margin: 8px 0;
-      color: #555;
-      line-height: 1.6;
+      margin: 12px 0;
+      color: #222222;
+      line-height: 1.7;
+      font-size: 1.05em;
     }
 
     .block-hash {
       font-family: 'Courier New', monospace;
-      font-size: 0.9em;
+      font-size: 0.95em;
       word-break: break-all;
       background: white;
-      padding: 10px;
-      border-radius: 5px;
-      margin-top: 5px;
+      padding: 16px;
+      border-radius: 12px;
+      margin-top: 12px;
+      border: 1px solid #E0E0E0;
+      color: #666666;
     }
 
     .history-section {
       background: white;
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
       animation: fadeInUp 1s ease 0.2s both;
+      border: 1px solid #E0E0E0;
     }
 
     .history-section h2 {
-      font-size: 2em;
-      color: #667eea;
-      margin-bottom: 20px;
+      font-size: 2.2em;
+      color: #1A1A1A;
+      margin-bottom: 32px;
       text-align: center;
+      font-weight: 700;
     }
 
     .history-list {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
     }
 
     .history-item {
-      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-      padding: 20px;
-      border-radius: 10px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background: #FAFAFA;
+      padding: 24px;
+      border-radius: 16px;
+      transition: all 0.3s ease;
       cursor: pointer;
+      border: 1px solid #E0E0E0;
     }
 
     .history-item:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(252, 182, 159, 0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     }
 
     .history-date {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #c0392b;
-      margin-bottom: 10px;
+      font-size: 1.3em;
+      font-weight: 600;
+      color: #1A1A1A;
+      margin-bottom: 16px;
     }
 
     .history-numbers {
       display: flex;
-      gap: 15px;
-      margin-top: 10px;
+      gap: 16px;
+      margin-top: 16px;
     }
 
     .history-number {
       flex: 1;
       background: white;
-      padding: 10px;
-      border-radius: 5px;
+      padding: 16px;
+      border-radius: 12px;
       text-align: center;
+      border: 1px solid #E0E0E0;
     }
 
     .history-number-label {
-      font-size: 0.8em;
-      color: #888;
-      margin-bottom: 5px;
+      font-size: 0.9em;
+      color: #666666;
+      margin-bottom: 8px;
+      font-weight: 500;
     }
 
     .history-number-value {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #667eea;
+      font-size: 1.6em;
+      font-weight: 700;
+      color: #FF9900;
       font-family: 'Courier New', monospace;
     }
 
     .loading {
       text-align: center;
-      padding: 40px;
-      color: #667eea;
+      padding: 48px;
+      color: #FF9900;
       font-size: 1.2em;
     }
 
     .spinner {
-      border: 4px solid #f3f3f3;
-      border-top: 4px solid #667eea;
+      border: 4px solid #FAFAFA;
+      border-top: 4px solid #FF9900;
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       animation: spin 1s linear infinite;
-      margin: 20px auto;
+      margin: 24px auto;
     }
 
     .error {
-      background: #fee;
-      color: #c33;
-      padding: 20px;
-      border-radius: 10px;
+      background: #FFF5F5;
+      color: #E53E3E;
+      padding: 24px;
+      border-radius: 16px;
       text-align: center;
-      margin: 20px 0;
+      margin: 24px 0;
+      border: 1px solid #FED7D7;
     }
 
     footer {
       text-align: center;
-      padding: 40px 0 20px;
-      color: white;
-      opacity: 0.8;
+      padding: 48px 0 24px;
+      color: #666666;
+      opacity: 0.7;
+      font-size: 0.95em;
     }
 
     @keyframes fadeInDown {
