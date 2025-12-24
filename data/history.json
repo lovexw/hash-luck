@@ -1,5 +1,14 @@
 [
   {
+    "date": "2025-12-24",
+    "block_height": 929214,
+    "block_hash": "00000000000000000000546c95dce0331c9655d1f513a3b8e89838d209093b9b",
+    "block_timestamp": 1766548334,
+    "lucky3": "939",
+    "lucky6": "939090",
+    "generated_at": "2025-12-24T04:27:12.123Z"
+  },
+  {
     "date": "2025-12-23",
     "block_height": 929071,
     "block_hash": "00000000000000000000f372826fedb83534f6ebd99d53adfe3e347c146d69dd",
