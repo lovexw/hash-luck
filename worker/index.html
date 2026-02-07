@@ -272,6 +272,45 @@
       margin-top: 40px;
     }
 
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-top: 40px;
+      padding: 20px;
+    }
+
+    .pagination button {
+      padding: 10px 20px;
+      background: white;
+      border: 1px solid #E0E0E0;
+      border-radius: 8px;
+      color: #222222;
+      font-size: 0.95em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .pagination button:hover:not(:disabled) {
+      background: #FF9900;
+      color: white;
+      border-color: #FF9900;
+    }
+
+    .pagination button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .pagination .page-info {
+      padding: 10px 20px;
+      color: #666666;
+      font-size: 0.95em;
+      font-weight: 500;
+    }
+
     .history-item {
       background: #FAFAFA;
       padding: 24px;
@@ -491,6 +530,9 @@
 
   <script>
     const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/lovexw/hash-luck/main/data';
+    let allHistoryData = [];
+    let currentPage = 1;
+    const itemsPerPage = 6;
 
     function formatDate(dateStr) {
       const date = new Date(dateStr);
@@ -590,7 +632,18 @@
         return;
       }
 
-      const historyHTML = history.map(item => `
+      allHistoryData = history;
+      currentPage = 1;
+      renderHistoryPage();
+    }
+
+    function renderHistoryPage() {
+      const totalPages = Math.ceil(allHistoryData.length / itemsPerPage);
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      const pageData = allHistoryData.slice(startIndex, endIndex);
+
+      const historyHTML = pageData.map(item => `
         <div class="history-item" title="区块高度: ${item.block_height}">
           <div class="history-date">${formatDate(item.date)}</div>
           <div class="history-numbers">
@@ -608,7 +661,24 @@
 
       document.getElementById('history-content').innerHTML = `
         <div class="history-list">${historyHTML}</div>
+        ${totalPages > 1 ? `
+          <div class="pagination">
+            <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''}>上一页</button>
+            <span class="page-info">第 ${currentPage} / ${totalPages} 页</span>
+            <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''}>下一页</button>
+          </div>
+        ` : ''}
       `;
+    }
+
+    function changePage(delta) {
+      const totalPages = Math.ceil(allHistoryData.length / itemsPerPage);
+      currentPage += delta;
+
+      if (currentPage < 1) currentPage = 1;
+      if (currentPage > totalPages) currentPage = totalPages;
+
+      renderHistoryPage();
     }
 
     loadTodayData();
